@@ -1,0 +1,25 @@
+# Config for WTF configuration sync
+# Lines are key=value. Comments start with #
+#
+# prototype: The source character to copy FROM.
+#   Format: account/realm/character (recommended) or account/character
+#
+# addon_excluded: Comma-separated list of addon names to skip when copying
+# SavedVariables. Names are matched against file basenames without extensions,
+# and also as prefixes (e.g. pfQuest matches pfQuest.lua and pfQuest-turtle.lua).
+# Do not use braces.
+#
+# char_files_excluded (optional): Comma-separated list of character-level files
+# to skip when copying (e.g., AddOns.txt, bindings-cache.wtf, macros-cache.txt).
+# Do not use braces.
+#
+# only_chars (optional): Comma-separated character names to restrict the
+# destination set. If empty, applies to all characters in target accounts.
+#
+# Note: All accounts except the prototype's account will be synced.
+# At account level, only SavedVariables.lua is synced.
+
+prototype={Account}/{Server}/{Char}
+addon_excluded=pfQuest
+char_files_excluded=AddOns.txt,bindings-cache.wtf,macros-cache.txt
+# only_chars=
