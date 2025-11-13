@@ -69,7 +69,7 @@ while IFS= read -r line || [ -n "$line" ]; do
   # strip comments
   line="${line%%#*}"
   # trim
-  line="$(echo "$line" | sed -e 's/^\s*//' -e 's/\s*$//')"
+  line="$(echo "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
   [ -z "$line" ] && continue
   key="${line%%=*}"
   val="${line#*=}"
@@ -85,7 +85,7 @@ done < "$CONFIG_FILE"
 
 # Normalize list fields: strip spaces only
 norm_list() {
-  echo "$1" | sed -e 's/\s//g'
+  echo "$1" | sed -e 's/[[:space:]]//g'
 }
 
 # Bash 3 + set -u safe CSV -> array
