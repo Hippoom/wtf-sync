@@ -20,6 +20,6 @@
 # At account level, only SavedVariables.lua is synced.
 
 prototype={Account}/{Server}/{Char}
-addon_excluded=pfQuest
+addon_excluded=pfQuest,ItemRack
 char_files_excluded=AddOns.txt,bindings-cache.wtf,macros-cache.txt
 # only_chars=
